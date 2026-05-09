@@ -1,0 +1,14 @@
+{
+  "background.fullscreen": {
+    // `images` supports online and local images, as well as folders.
+    "images": [
+      // online images, only `https` is allowed.
+      "https://i.pinimg.com/736x/3a/16/c9/3a16c9b3900a20a34e4fd5ab0ab1c9cb.jpg"
+    ],
+    "opacity": 0.2,
+    "size": "cover",
+    "position": "center",
+    "interval": 0,
+    "random": false
+  }
+}
