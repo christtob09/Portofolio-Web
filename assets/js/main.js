@@ -291,24 +291,24 @@ async function fetchLanyardData() {
 
     if (data) {
       const {
-        discord_user: { username, discriminator, avatar },
+        discord_user: { username, avatar },
         discord_status,
         activities,
       } = data;
 
       const avatarUrl = `https://cdn.discordapp.com/avatars/${data.discord_user.id}/${avatar}.png`;
       const statusColor =
-        discord_status === "online"
+        discord_status === "ONLINE"
           ? "#43b581"
-          : discord_status === "idle"
+          : discord_status === "IDLE"
             ? "#faa61a"
-            : discord_status === "dnd"
+            : discord_status === "DND"
               ? "#f04747"
               : "#747f8d";
 
       // Display basic info
       discordAvatar.src = avatarUrl;
-      discordUsername.innerHTML = `${username}#${discriminator}`;
+      discordUsername.innerHTML = `${username}`;
       discordStatus.innerHTML = `<span style="color:${statusColor};">•</span> ${discord_status}`;
 
       // Display activity
